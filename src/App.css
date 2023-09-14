@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  width: 400px;
+  margin: auto;
+  height: 100 vh;
+  
+}
+
+.buttons {
+  display: grid;
+  width: 400px;
+  
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "clear c  c division"
+    "seven eight nine multiply"
+    "four five six subtract"
+    "one two three plus"
+    "Zero Zero dot equal";
+  background-color: gray;
+  border: 1px solid black;
+  text-align: center;
+  border-radius: 0px 0px 10px 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  grid-gap: 10px;
+  padding: 5px 0px;
+}
+button {
+  border-radius: 100px;
+  border: none;
+  font-size: 40px;
+  cursor:pointer;
+  transform: transform 0.1s ease-in-out;
+}
+button:hover {
+  background-color: rgb(206, 192, 192);
+}
+button:active{
+  transform: scale(0.95);
+}
+
+#display {
+  height: 100px;
+  width: 100%;
+  background-color: black;
+  color: white;
+  font-size: 40px;
+  border-radius: 5px 5px 0px 0px;
+  border: 1px solid black;
+ 
+}
+#expression{
+  background-color: black;
+  color: white;
+  font-size: 40px;
+}
+
+.clear,
+.c {
+  background-color: tomato;
+}
+
+.c {
+  grid-area: c;
+}
+.clear {
+  grid-area: clear;
+}
+.equal {
+  grid-area: equal;
+}
+.zero {
+  grid-area: Zero;
+}
+.dot {
+  grid-area: dot;
+}
+.plus {
+  grid-area: plus;
+}
+.subtract {
+  grid-area: subtract;
+}
+.multiply {
+  grid-area: multiply;
+}
+
+.division {
+  grid-area: division;
+}
+.one {
+  grid-area: one;
+}
+.two {
+  grid-area: two;
+}
+.three {
+  grid-area: three;
+}
+.four {
+  grid-area: four;
+}
+.five {
+  grid-area: five;
+}
+.six {
+  grid-area: six;
+}
+.seven {
+  grid-area: seven;
+}
+.eight {
+  grid-area: eight;
+}
+.nine {
+  grid-area: nine;
+}
