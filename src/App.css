@@ -1,22 +1,46 @@
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-.container {
+body{
+  height: 100vh;
+}
+
+#root{
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+h1{
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-shadow: 1px 3px 0 #969696,   1px 3px 5px #aba8a8;
+  padding-bottom: 10px;
+}
+h4{
+  padding: 10px;
+}
+body{
+  background: linear-gradient(90deg, rgba(1,12,17,1) 0%, rgba(9,109,121,1) 45%, rgba(0,194,255,1) 100%);
+}
+
+.container {
+  
   text-align: center;
   justify-content: center;
   width: 400px;
   margin: auto;
   height: 100 vh;
-  
+  padding: 10px;
 }
 
 .buttons {
-  display: grid;
-  width: 400px;
   
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   grid-template-areas:
@@ -31,7 +55,7 @@
   border-radius: 0px 0px 10px 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   grid-gap: 10px;
-  padding: 5px 0px;
+  padding: 10px 10px;
 }
 button {
   border-radius: 100px;
@@ -45,22 +69,39 @@ button:hover {
 }
 button:active{
   transform: scale(0.95);
+  border: none;
 }
 
-#display {
-  height: 100px;
+.display {
+  grid-column: 1 / -1;
+  background-color: black;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 5px;
+  word-wrap: break-word;
+  word-break: break-all;
+  height:100px;
+  border-radius: 5px 5px 0px 0px;
+  border: 1px solid black;
+  /*height: 100%;
   width: 100%;
   background-color: black;
   color: white;
   font-size: 40px;
-  border-radius: 5px 5px 0px 0px;
-  border: 1px solid black;
+  */
  
 }
-#expression{
+.display .expression{
+  background-color: black;
+  color: yellow;
+  font-size: 1.5rem;
+}
+.display .answer{
   background-color: black;
   color: white;
-  font-size: 40px;
+  font-size: 2.5rem;
 }
 
 .clear,
